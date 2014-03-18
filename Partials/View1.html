@@ -1,11 +1,3 @@
-<!-- Partial1 Loaded!
-<br />
-<ul>
-    <li ng-repeat="customer in customers | orderBy:'name'">{{ customer.name }} - {{ customer.city }}</li>
-</ul>
-<br />
-<a href="#/partial2">Load partial2</a>
- -->
 
 <div class="container">
   <h2>View 1</h2>
@@ -14,7 +6,7 @@
   <input type="text" x-ng-model="filter.name">
   <br>
   <ul>
-    <li x-ng-repeat="cust in customers | filter:filter.name"></li>
+    <li x-ng-repeat="cust in customers | filter:filter.name">{{cust.name}} - {{cust.city}}</li>
   </ul>
   <br>
 

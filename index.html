@@ -3,54 +3,14 @@
 <head>
   <!-- JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
 
-<!--   <div class="container" data-ng-init="names=['Dave','Napur','Heedy','Shriva']">
-    <ul>
-      <li x-ng-repeat="firstName in names">{{firstName}}</li>
-    </ul>
-  </div>
-
-  <ul>
-    <li x-ng-repeat="cust in customers | orderBy:'name'">
-      {{cust.name | uppercase}}
-    </li>
-  </ul> -->
-  
-  <!-- <input type="text" x-ng-init="customers=[
-      { name: 'Dave Jones', city: 'Phoenix' },
-            { name: 'Jamie Riley', city: 'Phoenix' },
-            { name: 'Heedy Wahlin', city: 'Chandler' },
-            { name: 'Thomas Winter', city: 'Seattle' }
-   ]" x-ng-model="nameText">-->  
-
-<!--   <div class="container" ng-controller="SimpleController">
-    Name:
-    <br>
-    <input type="text" x-ng-model="name"> {{name}}
-
-      <ul>
-          <li data-ng-repeat="cust in customers">{{ cust.name }} - {{ cust.city }}</li>
-      </ul>
-  </div> -->
-
   <div>
-    <div x-ng-view></div>
+    <div data-ng-view=""></div>
   </div>
-
-<!--   <script>
-    function SimpleController($scope) {
-      $scope.customers = [
-        { name: 'Dave Jones', city: 'Phoenix' },
-              { name: 'Jamie J40x04 Riley', city: 'Phoenix' },
-              { name: 'Heedy Wahlin', city: 'Chandler' },
-              { name: 'Thomas Winter', city: 'Seattle' }
-      ];
-    }
-  </script>
- -->
 
 </body>

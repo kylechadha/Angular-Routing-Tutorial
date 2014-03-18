@@ -1,4 +1,19 @@
-var demoApp = angular.module('demoApp', []);
+var demoApp = angular.module('demoApp', ['ngRoute']);
+
+demoApp.config(function($routeProvider) {
+  $routeProvider
+    .when('/view1',
+      {
+        controller: 'SimpleController',
+        templateUrl: 'Partials/View1.html'
+      })
+    .when('/view2',
+      {
+        controller: 'SimpleController',
+        templateUrl: 'Partials/View2.html'
+      })
+    .otherwise({redirectTo: '/view1'});
+});
 
 demoApp.controller('SimpleController', function($scope) {
   $scope.customers = [
@@ -14,19 +29,4 @@ demoApp.controller('SimpleController', function($scope) {
         city: $scope.Customer.city
       });
   };
-});
-
-demoApp.config(function ($routeProvider) {
-  $routeProvider
-    .when('/view1',
-      {
-        controller: 'SimpleController',
-        templateURL: 'partials/view1.html'
-      })
-    .when('/view2',
-      {
-        controller: 'SimpleController',
-        templateURL: 'partials/view2.html'
-      })
-    .otherwise({redirectTo: '/view1'});
 });
