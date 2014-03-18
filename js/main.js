@@ -7,17 +7,26 @@ demoApp.controller('SimpleController', function($scope) {
     { name: 'Heedy Wahlin', city: 'Chandler' },
     { name: 'Thomas Winter', city: 'Seattle' }
   ];
+  $scope.addCustomer = function() {
+    $scope.customers.push(
+      {
+        name: $scope.Customer.name,
+        city: $scope.Customer.city
+      });
+  };
 });
 
 demoApp.config(function ($routeProvider) {
   $routeProvider
-    .when('/'. {
-      controller: 'SimpleController',
-      templateURL: 'Partials/View1.html'
-    })
-    .when('/partial2', {
-      controller: 'SimpleController',
-      templateURL: 'Partials/View2.html'
-    })
-    .otherwise({redirectTo: '/'});
+    .when('/view1',
+      {
+        controller: 'SimpleController',
+        templateURL: 'partials/view1.html'
+      })
+    .when('/view2',
+      {
+        controller: 'SimpleController',
+        templateURL: 'partials/view2.html'
+      })
+    .otherwise({redirectTo: '/view1'});
 });

@@ -26,18 +26,20 @@
             { name: 'Heedy Wahlin', city: 'Chandler' },
             { name: 'Thomas Winter', city: 'Seattle' }
    ]" x-ng-model="nameText">-->  
-  <div class="container" ng-controller="SimpleController">
 
-  Name:
-  <br>
-  <input type="text" x-ng-model="name"> {{name}}
+<!--   <div class="container" ng-controller="SimpleController">
+    Name:
+    <br>
+    <input type="text" x-ng-model="name"> {{name}}
 
-    <ul>
-        <li data-ng-repeat="cust in customers">{{ cust.name }} - {{ cust.city }}</li>
-    </ul>
+      <ul>
+          <li data-ng-repeat="cust in customers">{{ cust.name }} - {{ cust.city }}</li>
+      </ul>
+  </div> -->
+
+  <div>
+    <div x-ng-view></div>
   </div>
-
-  
 
 <!--   <script>
     function SimpleController($scope) {
